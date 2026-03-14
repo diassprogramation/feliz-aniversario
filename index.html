@@ -12,23 +12,14 @@
         @keyframes subir { from {bottom: -100px;} to {bottom: 110%;} }
         .mensagem { font-size: 22px; color: #333; margin: 20px auto; width: 70%; line-height: 1.5; }
         .especial { font-size: 26px; color: #9900cc; margin-top: 30px; font-weight: bold; }
-        audio { display: none; } /* player invisível */
     </style>
 </head>
 <body>
     <!-- COLOQUE A MÚSICA AQUI: o arquivo 'from-the-start-lyrics.mp3' deve estar na mesma pasta -->
-    <audio id='musica' autoplay loop muted>
+    <audio autoplay loop controls>
         <source src='from-the-start-lyrics.mp3' type='audio/mpeg'>
         Seu navegador não suporta áudio.
     </audio>
-    <script>
-        // Remove o mute após carregar para permitir autoplay
-        window.onload = function() {
-            var audio = document.getElementById('musica');
-            audio.muted = false;
-            audio.play();
-        };
-    </script>
     <div class='bolo'>🎂</div>
     <h1>Feliz Aniversário!</h1>
     <p class='mensagem'>🎉 Feliz aniversário! 🎂<br>
