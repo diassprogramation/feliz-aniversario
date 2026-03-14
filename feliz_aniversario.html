@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Feliz Aniversário!</title>
+    <style>
+        body { text-align: center; background: linear-gradient(to right, #ffcccc, #ffe6e6); font-family: Arial, sans-serif; overflow: hidden; height: 100vh; }
+        h1 { font-size: 50px; color: #ff0066; animation: pisca 1s infinite; }
+        @keyframes pisca { 0% {opacity: 1;} 50% {opacity: 0;} 100% {opacity: 1;} }
+        .bolo { font-size: 100px; margin-top: 20px; }
+        .balao { position: absolute; font-size: 50px; bottom: -100px; animation: subir 8s linear infinite; }
+        @keyframes subir { from {bottom: -100px;} to {bottom: 110%;} }
+        .mensagem { font-size: 22px; color: #333; margin: 20px auto; width: 70%; line-height: 1.5; }
+        .especial { font-size: 26px; color: #9900cc; margin-top: 30px; font-weight: bold; }
+        audio { display: none; } /* player invisível */
+    </style>
+</head>
+<body>
+    <!-- COLOQUE A MÚSICA AQUI: o arquivo 'from-the-start-lyrics.mp3' deve estar na mesma pasta -->
+    <audio id='musica' autoplay loop muted>
+        <source src='from-the-start-lyrics.mp3' type='audio/mpeg'>
+        Seu navegador não suporta áudio.
+    </audio>
+    <script>
+        // Remove o mute após carregar para permitir autoplay
+        window.onload = function() {
+            var audio = document.getElementById('musica');
+            audio.muted = false;
+            audio.play();
+        };
+    </script>
+    <div class='bolo'>🎂</div>
+    <h1>Feliz Aniversário!</h1>
+    <p class='mensagem'>🎉 Feliz aniversário! 🎂<br>
+    Hoje é um dia iluminado porque celebramos você, uma pessoa incrível e muito especial. Que cada instante seja repleto de alegria, que seus sonhos se aproximem ainda mais da realidade e que a vida continue te presenteando com momentos inesquecíveis.<br><br>
+    Você merece todo o carinho, amor e felicidade do mundo. Que este novo ciclo seja marcado por conquistas, saúde e sorrisos genuínos.<br><br>
+    Parabéns por ser quem você é — alguém que torna a vida das pessoas ao seu redor mais bonita e significativa.</p>
+    <p class='especial'>💖 Você é única e merece tudo de melhor hoje e sempre!</p>
+    <div class='balao' style='left:10%; animation-delay:0s;'>🎈</div>
+    <div class='balao' style='left:30%; animation-delay:2s;'>🎈</div>
+    <div class='balao' style='left:50%; animation-delay:4s;'>🎈</div>
+    <div class='balao' style='left:70%; animation-delay:1s;'>🎈</div>
+    <div class='balao' style='left:90%; animation-delay:3s;'>🎈</div>
+</body>
+</html>
